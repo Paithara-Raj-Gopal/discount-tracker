@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Discount Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Customer Discount Tracker</h1>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>Upload Weekly Customer CSV</h2>
+            <p>Upload the CSV file exported from the Chrome extension.</p>
+            <label for="csvFileInput" class="file-input-label">
+                Choose CSV File
+            </label>
+            <input type="file" id="csvFileInput" accept=".csv">
+            <div id="errorMessage" class="error-message"></div>
+        </section>
+
+        <section class="customer-list-section" id="customerListSection" style="display: none;">
+             <h2>Eligible Customers</h2>
+             <div class="table-container">
+                <table id="customerTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Mobile</th>
+                            <th>Email</th>
+                            <th>City</th>
+                            <th>Orders</th>
+                            <th>Sales</th>
+                            <th>Claimed Discount?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customerTableBody">
+                        <!-- Customer rows will be inserted here by JavaScript -->
+                    </tbody>
+                </table>
+             </div>
+             <p id="noDataMessage" style="display: none;">No customer data loaded.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 Discount Tracker</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

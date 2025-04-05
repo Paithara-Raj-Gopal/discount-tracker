@@ -1,0 +1,190 @@
+/* Basic Reset & Defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    padding-bottom: 60px; /* Footer spacing */
+}
+
+/* Header */
+header {
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-weight: 500;
+}
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem; /* Padding on sides */
+}
+
+section {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #0056b3; /* Darker blue */
+    margin-bottom: 1rem;
+    font-weight: 600;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* Upload Section */
+.upload-section p {
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+/* Style the file input */
+input[type="file"] {
+    display: none; /* Hide the default input */
+}
+
+.file-input-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 1rem;
+}
+
+.file-input-label:hover {
+    background-color: #218838; /* Darker green */
+}
+
+.error-message {
+    color: #dc3545; /* Red */
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* Customer List Section & Table */
+.customer-list-section {
+    /* Styles applied when visible */
+}
+
+/* Make table responsive by allowing horizontal scroll */
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    white-space: nowrap; /* Prevent text wrapping initially */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e9ecef; /* Light grey */
+    font-weight: 600;
+    color: #495057;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Very light grey for alternate rows */
+}
+
+tbody tr:hover {
+    background-color: #e2e6ea;
+}
+
+/* Style for claimed rows */
+tbody tr.claimed td {
+    text-decoration: line-through;
+    color: #888;
+}
+tbody tr.claimed td:last-child { /* Keep checkbox cell normal */
+    text-decoration: none;
+    color: #333;
+}
+
+/* Checkbox styling */
+td input[type="checkbox"] {
+    width: 1.1rem;
+    height: 1.1rem;
+    cursor: pointer;
+}
+
+#noDataMessage {
+    text-align: center;
+    color: #6c757d; /* Grey text */
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark grey */
+    color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    /* Fixed footer example - uncomment if needed */
+    /*
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    */
+}
+
+/* Mobile Responsiveness Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    th, td {
+        padding: 10px 8px; /* Reduce padding */
+        font-size: 0.9rem; /* Slightly smaller font */
+    }
+
+    .file-input-label {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    /* If you want text to wrap on mobile, remove white-space: nowrap */
+    /* table { white-space: normal; } */
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.3rem;
+    }
+     th, td {
+        padding: 8px 5px;
+        font-size: 0.8rem;
+    }
+}
